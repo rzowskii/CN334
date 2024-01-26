@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Design HTML and CSS | CodingNepal</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <a href="#">Ecommerce</a>
+            </div>
+            <ul>
+                <li><a href="#">Homepage</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Check out</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Product</a></li>
+            </ul>
+        </div>
+    </nav>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        ::selection {
+            color: #0000;
+            background: #fff;
+        }
+
+        nav {
+            background: #1b1b1b;
+            width: 100%;
+            padding: 7px 0;
+            z-index: 10;
+        }
+
+        nav .menu {
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .menu .logo a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 35px;
+            font-weight: 600;
+        }
+
+        .menu ul {
+            display: inline-flex;
+        }
+
+        .menu ul li {
+            list-style: none;
+            margin-left: 7px;
+        }
+
+        .menu ul li:first-child {
+            margin-left: 0px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            background: #fff;
+            color: black;
+        }
+        body {
+            background: linear-gradient(#f3caf4, #b8c9df);
+        }
+
+        .card-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            max-width: 1250px;
+            margin: 150px auto;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .card-list .card-item {
+            background: #fff;
+            padding: 26px;
+            border-radius: 8px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+            list-style: none;
+            cursor: pointer;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: border 0.5s ease;
+        }
+
+        .card-list .card-item:hover {
+            border: 2px solid #000;
+        }
+
+        .card-list .card-item img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .card-list span {
+            display: inline-block;
+            background: #F7DFF5;
+            margin-top: 32px;
+            padding: 8px 15px;
+            font-size: 0.75rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .card-list .developer {
+            background-color: #F7DFF5;
+            color: #B22485;
+        }
+
+        .card-list .designer {
+            background-color: #d1e8ff;
+            color: #2968a8;
+        }
+
+        .card-list .editor {
+            background-color: #d6f8d6;
+            color: #205c20;
+        }
+
+        .card-item h3 {
+            color: #000;
+            font-size: 1.438rem;
+            margin-top: 28px;
+            font-weight: 600;
+        }
+
+        .card-item .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-35deg);
+            height: 40px;
+            width: 40px;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 50%;
+            margin-top: 40px;
+            transition: 0.2s ease;
+        }
+
+        .card-list .card-item:hover .arrow {
+            background: #000;
+            color: #fff;
+        }
+
+        @media (max-width: 1200px) {
+            .card-list .card-item {
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 980px) {
+            .card-list {
+                margin: 0 auto;
+            }
+        }
+
+    </style>
+</head>
+<!-- https://i.kym-cdn.com/entries/icons/original/000/046/919/crunching_cat.jpg -->
+<!-- <img src="https://img.freepik.com/free-photo/cute-domestic-kitten-sits-window-staring-outside-generative-ai_188544-12519.jpg?w=2000&t=st=1706177332~exp=1706177932~hmac=3e515adad5213bff52b6db35a901d52ecd61f150ce6570d0154ad39e57111eee" -->
+
+<body>
+    <div class="card-list">
+        <a href="#" class="card-item">
+            <img src="https://www.newshub.co.nz/home/lifestyle/2019/08/the-top-five-cat-memes-of-all-time-rated/_jcr_content/par/video/image.dynimg.1280.q75.jpg/v1565234972425/KNOWYOURMEME-sad-cat-crying-1120.jpg"
+                alt="Card Image">
+            <span class="developer">Developer</span>
+            <h3>A "developer" codes software and websites.</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+        <a href="#" class="card-item">
+            <img src="https://img.freepik.com/free-photo/close-up-portrait-beautiful-cat_23-2149214373.jpg?w=1800&t=st=1706177247~exp=1706177847~hmac=42dc3fd947171fa568ce09e2f3d7b033b6c02a6b49fbdafbdf5a1d3ae698b3d1"
+                alt="Card Image">
+            <span class="designer">Designer</span>
+            <h3>A "designer" is a design expert.</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+        <a href="#" class="card-item">
+            <img src="https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?q=65&auto=format&w=2270&ar=2:1&fit=crop"
+                alt="Card Image">
+            <span class="editor">Editor</span>
+            <h3>An "editor" ensures content quality and accuracy.</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>
